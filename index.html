@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda de Frutas</title>
+    <title>🍎 Mi Tienda de Frutas 🍌</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,23 +13,39 @@
     </header>
 
     <main class="contenedor">
-        <section class="lista-frutas">
-            <h2>Frutas Disponibles</h2>
-            <ul>
-                <li>🍎 Manzana Roja - $15 kg</li>
-                <li>🍌 Plátano - $20 kg</li>
-                <li>🍊 Naranja - $12 kg</li>
-                <li>🍓 Fresa - $45 kg</li>
-            </ul>
+        <section class="tienda">
+            <h2>Frutas en Oferta</h2>
+            <div class="tarjeta-fruta">
+                <p>🍎 Manzana Roja - <strong>$15 kg</strong></p>
+                <button class="btn-comprar" data-fruta="Manzana">Comprar</button>
+            </div>
+            
+            <div class="tarjeta-fruta">
+                <p>🍌 Plátano Tabasco - <strong>$20 kg</strong></p>
+                <button class="btn-comprar" data-fruta="Plátano">Comprar</button>
+            </div>
+
+            <div class="tarjeta-fruta">
+                <p>🍊 Naranja Dulce - <strong>$12 kg</strong></p>
+                <button class="btn-comprar" data-fruta="Naranja">Comprar</button>
+            </div>
+
+            <div class="tarjeta-fruta">
+                <p>🍓 Fresas Frescas - <strong>$45 kg</strong></p>
+                <button class="btn-comprar" data-fruta="Fresa">Comprar</button>
+            </div>
+
+            <p id="mensaje-compra" style="color: #27ae60; font-weight: bold; margin-top: 20px; text-align: center; height: 24px;"></p>
         </section>
 
-        <div class="tarjeta-info">
-            <p>Bienvenido a mi proyecto de la clase de Web. Aquí puedes ver el inventario de mi frutería.</p>
-        </div>
+        <aside class="info">
+            <h3>Información</h3>
+            <p>Bienvenido a mi tarea de la clase de Web. Esta página usa HTML, CSS y JavaScript para simular una tienda real.</p>
+        </aside>
     </main>
 
     <footer>
-        <p>&copy; 2026 - Sharon Ballesteros</p>
+        <p>&copy; 2026 - Sharon Ballesteros | FES Aragón</p>
     </footer>
 
     <script src="app.js"></script>
