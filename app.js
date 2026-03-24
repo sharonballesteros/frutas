@@ -1,21 +1,41 @@
-function tabla7(){
+// Arreglo inicial de frutas
+let frutas = ["Manzana", "Plátano", "Naranja", "Uva", "Mango"];
 
-let resultadoHTML = "";
+// Arreglo donde se guardarán las frutas elegidas
+let elegidas = [];
 
-console.log("Tabla del 7");
+// Variable para controlar el ciclo
+let continuar = true;
 
-for(let i = 1; i <= 10; i++){
+while (continuar) {
 
-let resultado = 7 * i;
+    // Mostrar lista de frutas
+    let lista = "Frutas disponibles:\n";
+    for (let i = 0; i < frutas.length; i++) {
+        lista += (i + 1) + ". " + frutas[i] + "\n";
+    }
 
-let linea = "7 x " + i + " = " + resultado;
+    // Preguntar al usuario
+    let opcion = prompt(lista + "\nElige una fruta por número:");
 
-console.log(linea);
+    // Convertir a número
+    let index = parseInt(opcion) - 1;
 
-resultadoHTML += linea + "<br>";
+    // Validar opción
+    if (index >= 0 && index < frutas.length) {
+        elegidas.push(frutas[index]);
+        alert("Agregaste: " + frutas[index]);
+    } else {
+        alert("Opción inválida");
+    }
 
+    // Preguntar si quiere continuar
+    let respuesta = prompt("¿Quieres elegir otra fruta? (si/no)").toLowerCase();
+
+    if (respuesta !== "si") {
+        continuar = false;
+    }
 }
 
-document.getElementById("resultado").innerHTML = resultadoHTML;
-
-}
+// Mostrar resultado final
+alert("Frutas elegidas: " + elegidas.join(", "));
